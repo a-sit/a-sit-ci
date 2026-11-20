@@ -2,7 +2,8 @@
 // Aufruf (im Wurzelordner von a-sit-ci):
 //   npm ci && npx playwright install chromium   (einmalig)
 //   node werkzeuge/png-export.mjs
-// Ergebnis: logo/png/<name>-<höhe>.png für die Höhen in HOEHEN.
+// Ergebnis: logo/png/<name>-<höhe>.png für die Höhen in HOEHEN (transparent)
+//           logo/vorschau/<name>.png mit passendem Hintergrund (für das README)
 
 import { readdirSync, readFileSync, mkdirSync } from "node:fs";
 import { dirname, join, basename } from "node:path";
@@ -12,9 +13,13 @@ import { chromium } from "playwright";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SVG = join(ROOT, "logo/svg");
 const PNG = join(ROOT, "logo/png");
+const VORSCHAU = join(ROOT, "logo/vorschau");
 const HOEHEN = [64, 128, 256, 512];
+// Hintergrund der Vorschaubilder je Fassung
+const HINTERGRUND = { "a-sit-logo": "#FFFFFF", "a-sit-logo-dunkel": "#0B111B", "a-sit-logo-negativ": "#0B111B", "a-sit-logo-schwarz": "#FFFFFF", "a-sit-logo-weiss": "#0B111B" };
 
 mkdirSync(PNG, { recursive: true });
+mkdirSync(VORSCHAU, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage();
 let n = 0;
@@ -30,6 +35,15 @@ for (const datei of readdirSync(SVG).filter((f) => f.endsWith(".svg")).sort()) {
     await page.screenshot({ path: join(PNG, `${basename(datei, ".svg")}-${h}.png`), omitBackground: true, clip: { x: 0, y: 0, width: w, height: h } });
     n++;
   }
+  // Vorschau: Logo 80 px hoch, 40 px Rand, feste Breite für eine ruhige Tabelle
+  const name = basename(datei, ".svg");
+  const vh = 80, vw = Math.ceil((vh * vbW) / vbH), pad = 40;
+  await page.setViewportSize({ width: vw + 2 * pad, height: vh + 2 * pad });
+  await page.setContent(
+    `<!doctype html><html><body style="margin:0;padding:${pad}px;background:${HINTERGRUND[name] ?? "#FFFFFF"}">${svg.replace("<svg ", `<svg width="${vw}" height="${vh}" style="display:block" `)}</body></html>`,
+  );
+  await page.screenshot({ path: join(VORSCHAU, `${name}.png`) });
+  n++;
 }
 await browser.close();
 console.log(`${n} PNG-Dateien geschrieben.`);
