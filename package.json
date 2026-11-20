@@ -1,10 +1,11 @@
 {
   "name": "a-sit-ci",
   "private": true,
-  "description": "Werkzeuge für das Logo-Paket von A-SIT (PNG-Export)",
+  "description": "Werkzeuge für das Logo-Paket von A-SIT (PNG-Export, Symbol)",
   "type": "module",
   "scripts": {
-    "png": "node werkzeuge/png-export.mjs"
+    "png": "node werkzeuge/png-export.mjs",
+    "symbol": "node werkzeuge/symbol-erzeugen.mjs"
   },
   "devDependencies": {
     "playwright": "1.64.1"

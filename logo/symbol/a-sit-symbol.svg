@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><radialGradient id="a-sit-symbol-flagge" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(440 0 0 440 687.3 133.9)"><stop offset="0.046" stop-color="#00A3A6"/><stop offset="0.149" stop-color="#1C7FA0"/><stop offset="0.275" stop-color="#3A5999"/><stop offset="0.342" stop-color="#464B96"/><stop offset="0.522" stop-color="#963286"/><stop offset="0.8" stop-color="#FA0041"/></radialGradient></defs>
+<rect width="64" height="64" rx="12" fill="#FFFFFF"/>
+<g transform="translate(5.7932 14.9423) scale(0.0517)"><path fill="#0369A1" d="M4 660 225 0H435L655 660H480L332 131H326L177 660ZM129 543V429H550V543Z"/><path fill="url(#a-sit-symbol-flagge)" d="M623.7,117H1010V259H671ZM718.3,401H1010V543H765.7Z"/></g>
+</svg>
