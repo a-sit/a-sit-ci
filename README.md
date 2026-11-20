@@ -57,6 +57,7 @@ Die Wortmarke „A=SIT“ ist in Bricolage Grotesque (ExtraBold) gesetzt und in 
 | `logo/svg/` | Alle Fassungen als SVG. |
 | `logo/png/` | Alle Fassungen als PNG, 64, 128, 256 und 512 px hoch. |
 | `logo/vorschau/` | Vorschaubilder für diese Seite. |
+| `logo/teilen/og-standard.png` | Vorschaubild für geteilte Links (1200 × 630). Die Website nutzt es für Seiten ohne eigenes Titelbild. |
 | `logo/entwuerfe/` | Nicht freigegebene Entwürfe mit kleinerer Flagge (85 % und 75 %). Nicht verwenden. |
 | `farben/` | Farben als CSS-Variablen (`farben.css`) und als JSON (`farben.json`). |
 | `hugo/` | Logo für den Header der Website technology.a-sit.at. |

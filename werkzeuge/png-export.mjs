@@ -4,6 +4,7 @@
 //   node werkzeuge/png-export.mjs
 // Ergebnis: logo/png/<name>-<höhe>.png für die Höhen in HOEHEN (transparent)
 //           logo/vorschau/<name>.png mit passendem Hintergrund (für das README)
+//           logo/teilen/og-standard.png (1200 × 630) als Vorschaubild für geteilte Links
 
 import { readdirSync, readFileSync, mkdirSync } from "node:fs";
 import { dirname, join, basename } from "node:path";
@@ -45,5 +46,16 @@ for (const datei of readdirSync(SVG).filter((f) => f.endsWith(".svg")).sort()) {
   await page.screenshot({ path: join(VORSCHAU, `${name}.png`) });
   n++;
 }
+
+// Vorschaubild für geteilte Links (Open Graph). Die Website nutzt es für Seiten ohne eigenes Titelbild.
+const TEILEN = join(ROOT, "logo/teilen");
+mkdirSync(TEILEN, { recursive: true });
+const B = 1200, H = 630;
+await page.setViewportSize({ width: B, height: H });
+await page.setContent(`<!doctype html><html><body style="margin:0;width:${B}px;height:${H}px;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+      <div style="width:640px">${readFileSync(join(SVG, "a-sit-logo.svg"), "utf8").replace("<svg ", '<svg width="100%" ')}</div></body></html>`);
+await page.screenshot({ path: join(TEILEN, "og-standard.png") });
+n++;
+
 await browser.close();
 console.log(`${n} PNG-Dateien geschrieben.`);
