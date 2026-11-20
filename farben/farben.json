@@ -1,0 +1,15 @@
+{
+  "wortmarke": { "hell": "#0369A1", "dunkel": "#6CBDF0" },
+  "flagge": {
+    "art": "radialer Verlauf (Digital Austria)",
+    "stopps": [
+      { "position": 0.046, "farbe": "#00A3A6" },
+      { "position": 0.149, "farbe": "#1C7FA0" },
+      { "position": 0.275, "farbe": "#3A5999" },
+      { "position": 0.342, "farbe": "#464B96" },
+      { "position": 0.522, "farbe": "#963286" },
+      { "position": 0.8, "farbe": "#FA0041" }
+    ]
+  },
+  "website": { "text": "#0F1726", "dunkel": "#0B111B" }
+}

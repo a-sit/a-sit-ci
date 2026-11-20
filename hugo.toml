@@ -1,0 +1,15 @@
+# a-sit-ci als Hugo-Theme-Baustein.
+# Eine Hugo-Site bindet dieses Repository als Theme ein, z. B. als Git-Submodul unter themes/a-sit-ci:
+#   theme = ["a-sit-ci", "asit-base"]
+# Dann gilt:
+#   - Partial "logo.html" (Wortmarke für den Header, Farben aus den Tokens der Site)
+#   - /marke/<datei>.svg (alle SVG-Varianten aus logo/svg/, z. B. für Druck, PDF und Teilen)
+
+[module]
+  [[module.mounts]]
+    source = "hugo/layouts"
+    target = "layouts"
+
+  [[module.mounts]]
+    source = "logo/svg"
+    target = "static/marke"

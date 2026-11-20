@@ -1,0 +1,19 @@
+/* Farben der Marke A-SIT als CSS-Variablen.
+   Werte für die Website stehen zusätzlich in der Token-Datei der Site (a-sit-web). */
+:root {
+  /* Wortmarke */
+  --a-sit-blau: #0369A1;          /* auf hellen Flächen */
+  --a-sit-blau-hell: #6CBDF0;     /* auf dunklen Flächen */
+
+  /* Flagge: radialer Verlauf von Digital Austria, Stopps in dieser Reihenfolge */
+  --a-sit-flagge-1: #00A3A6;      /* 4,6 % */
+  --a-sit-flagge-2: #1C7FA0;      /* 14,9 % */
+  --a-sit-flagge-3: #3A5999;      /* 27,5 % */
+  --a-sit-flagge-4: #464B96;      /* 34,2 % */
+  --a-sit-flagge-5: #963286;      /* 52,2 % */
+  --a-sit-flagge-6: #FA0041;      /* 80 % */
+
+  /* Flächen und Text der Website technology.a-sit.at */
+  --a-sit-text: #0F1726;
+  --a-sit-dunkel: #0B111B;
+}
