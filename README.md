@@ -12,6 +12,14 @@ Hier liegen die Logo-Dateien von A-SIT zum Herunterladen. Dazu kommen die Farben
 | <img src="logo/vorschau/a-sit-logo-schwarz.png" alt="A-SIT-Logo, Fassung Schwarz" width="240"> | **Schwarz**<br>Einfarbig, z. B. für Schwarz-Weiß-Druck und Stempel. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/logo/svg/a-sit-logo-schwarz.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-schwarz-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-schwarz-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-schwarz-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-schwarz-512.png) |
 | <img src="logo/vorschau/a-sit-logo-weiss.png" alt="A-SIT-Logo, Fassung Weiß" width="240"> | **Weiß**<br>Einfarbig weiß, z. B. auf Fotos oder für Prägung. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/logo/svg/a-sit-logo-weiss.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-weiss-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-weiss-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-weiss-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/logo/png/a-sit-logo-weiss-512.png) |
 
+### Symbol
+
+Für kleine Flächen, auf denen die Wortmarke nicht lesbar ist: Browser-Tab (Favicon), App-Symbol, Profilbild.
+
+| Vorschau | Fassung | Herunterladen |
+|---|---|---|
+| <img src="logo/symbol/a-sit-symbol-128.png" alt="A-SIT-Symbol: A und Flagge auf weißer Kachel" width="64"> | **Symbol**<br>Das „A“ und der Anfang der Flagge auf einer weißen Kachel. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/logo/symbol/a-sit-symbol.svg)<br>PNG (px): [64](https://github.com/a-sit/a-sit-ci/raw/main/logo/symbol/a-sit-symbol-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/logo/symbol/a-sit-symbol-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/logo/symbol/a-sit-symbol-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/logo/symbol/a-sit-symbol-512.png) |
+
 Alle PNG-Dateien haben einen transparenten Hintergrund. Verwende nach Möglichkeit SVG. Es bleibt in jeder Größe scharf.
 
 Alle Dateien auf einmal: [ZIP herunterladen](https://github.com/a-sit/a-sit-ci/archive/refs/heads/main.zip).
@@ -57,6 +65,7 @@ Die Wortmarke „A=SIT“ ist in Bricolage Grotesque (ExtraBold) gesetzt und in 
 | `logo/svg/` | Alle Fassungen als SVG. |
 | `logo/png/` | Alle Fassungen als PNG, 64, 128, 256 und 512 px hoch. |
 | `logo/vorschau/` | Vorschaubilder für diese Seite. |
+| `logo/symbol/` | Symbol als SVG und PNG. In `web/` liegen `favicon.svg`, `favicon.ico` und `apple-touch-icon.png` für die Website. |
 | `logo/teilen/og-standard.png` | Vorschaubild für geteilte Links (1200 × 630). Die Website nutzt es für Seiten ohne eigenes Titelbild. |
 | `logo/entwuerfe/` | Nicht freigegebene Entwürfe mit kleinerer Flagge (85 % und 75 %). Nicht verwenden. |
 | `farben/` | Farben als CSS-Variablen (`farben.css`) und als JSON (`farben.json`). |
@@ -79,6 +88,7 @@ Die Schrift Bricolage Grotesque (variable TTF) gibt es bei [Google Fonts](https:
 ```bash
 .venv/bin/python werkzeuge/logo-erzeugen.py <BricolageGrotesque[opsz,wdth,wght].ttf>
 node werkzeuge/png-export.mjs
+node werkzeuge/symbol-erzeugen.mjs
 ```
 
 Entwurf mit anderer Flaggengröße (z. B. 85 %):

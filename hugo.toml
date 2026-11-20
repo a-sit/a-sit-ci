@@ -5,6 +5,7 @@
 #   - Partial "logo.html" (Wortmarke für den Header, Farben aus den Tokens der Site)
 #   - /marke/<datei>.svg (alle SVG-Varianten aus logo/svg/, z. B. für Druck, PDF und Teilen)
 #   - /og-standard.png (Vorschaubild für geteilte Links, aus logo/teilen/)
+#   - /favicon.svg, /favicon.ico, /apple-touch-icon.png (Symbol, aus logo/symbol/web/)
 
 [module]
   [[module.mounts]]
@@ -17,4 +18,8 @@
 
   [[module.mounts]]
     source = "logo/teilen"
+    target = "static"
+
+  [[module.mounts]]
+    source = "logo/symbol/web"
     target = "static"
