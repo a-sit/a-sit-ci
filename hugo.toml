@@ -3,6 +3,7 @@
 #   theme = ["a-sit-ci", "asit-base"]
 # Dann gilt:
 #   - Partial "logo.html" (Wortmarke für den Header, Farben aus den Tokens der Site)
+#   - Partial "logo-egiz.html" (EGIZ-Logo für den Header, gleiche Höhe und Tokens)
 #   - /marke/<datei>.svg (alle SVG-Varianten aus logo/svg/, z. B. für Druck, PDF und Teilen)
 #   - /og-standard.png (Vorschaubild für geteilte Links, aus logo/teilen/)
 #   - /favicon.svg, /favicon.ico, /apple-touch-icon.png (Symbol, aus logo/symbol/web/)
