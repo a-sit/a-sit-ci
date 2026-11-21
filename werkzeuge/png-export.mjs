@@ -1,9 +1,10 @@
-// Erzeugt PNG-Dateien mit transparentem Hintergrund aus allen SVGs in logo/svg/.
+// Erzeugt PNG-Dateien mit transparentem Hintergrund aus allen SVGs in logo/svg/ und egiz/svg/.
 // Aufruf (im Wurzelordner von a-sit-ci):
 //   npm ci && npx playwright install chromium   (einmalig)
 //   node werkzeuge/png-export.mjs
 // Ergebnis: logo/png/<name>-<höhe>.png für die Höhen in HOEHEN (transparent)
 //           logo/vorschau/<name>.png mit passendem Hintergrund (für das README)
+//           dasselbe für EGIZ unter egiz/png/ und egiz/vorschau/, dazu egiz/symbol/egiz-symbol-<größe>.png
 //           logo/teilen/og-standard.png (1200 × 630) als Vorschaubild für geteilte Links
 
 import { readdirSync, readFileSync, mkdirSync } from "node:fs";
@@ -13,19 +14,23 @@ import { chromium } from "playwright";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SVG = join(ROOT, "logo/svg");
-const PNG = join(ROOT, "logo/png");
-const VORSCHAU = join(ROOT, "logo/vorschau");
+// Jede Marke hat einen Ordner mit svg/, png/ und vorschau/
+const MARKEN = ["logo", "egiz"];
 const HOEHEN = [64, 128, 256, 512];
-// Hintergrund der Vorschaubilder je Fassung
-const HINTERGRUND = { "a-sit-logo": "#FFFFFF", "a-sit-logo-dunkel": "#0B111B", "a-sit-logo-negativ": "#0B111B", "a-sit-logo-schwarz": "#FFFFFF", "a-sit-logo-weiss": "#0B111B" };
+// Hintergrund der Vorschaubilder: dunkel für die Fassungen Dunkel, Negativ und Weiß
+const hintergrund = (name) => (/-(dunkel|negativ|weiss)$/.test(name) ? "#0B111B" : "#FFFFFF");
 
-mkdirSync(PNG, { recursive: true });
-mkdirSync(VORSCHAU, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage();
 let n = 0;
-for (const datei of readdirSync(SVG).filter((f) => f.endsWith(".svg")).sort()) {
-  const svg = readFileSync(join(SVG, datei), "utf8");
+for (const marke of MARKEN) {
+const QUELLE = join(ROOT, marke, "svg");
+const PNG = join(ROOT, marke, "png");
+const VORSCHAU = join(ROOT, marke, "vorschau");
+mkdirSync(PNG, { recursive: true });
+mkdirSync(VORSCHAU, { recursive: true });
+for (const datei of readdirSync(QUELLE).filter((f) => f.endsWith(".svg")).sort()) {
+  const svg = readFileSync(join(QUELLE, datei), "utf8");
   const [, , vbW, vbH] = svg.match(/viewBox="([^"]+)"/)[1].split(/\s+/).map(Number);
   for (const h of HOEHEN) {
     const w = Math.ceil((h * vbW) / vbH);
@@ -41,9 +46,19 @@ for (const datei of readdirSync(SVG).filter((f) => f.endsWith(".svg")).sort()) {
   const vh = 80, vw = Math.ceil((vh * vbW) / vbH), pad = 40;
   await page.setViewportSize({ width: vw + 2 * pad, height: vh + 2 * pad });
   await page.setContent(
-    `<!doctype html><html><body style="margin:0;padding:${pad}px;background:${HINTERGRUND[name] ?? "#FFFFFF"}">${svg.replace("<svg ", `<svg width="${vw}" height="${vh}" style="display:block" `)}</body></html>`,
+    `<!doctype html><html><body style="margin:0;padding:${pad}px;background:${hintergrund(name)}">${svg.replace("<svg ", `<svg width="${vw}" height="${vh}" style="display:block" `)}</body></html>`,
   );
   await page.screenshot({ path: join(VORSCHAU, `${name}.png`) });
+  n++;
+}
+}
+
+// EGIZ-Symbol: quadratische Kachel mit runden Ecken, transparenter Hintergrund
+const symbol = readFileSync(join(ROOT, "egiz/symbol/egiz-symbol.svg"), "utf8");
+for (const g of HOEHEN) {
+  await page.setViewportSize({ width: g, height: g });
+  await page.setContent(`<!doctype html><html><body style="margin:0;background:transparent">${symbol.replace("<svg ", `<svg width="${g}" height="${g}" style="display:block" `)}</body></html>`);
+  await page.screenshot({ path: join(ROOT, `egiz/symbol/egiz-symbol-${g}.png`), omitBackground: true });
   n++;
 }
 

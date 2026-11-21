@@ -1,6 +1,6 @@
 # A-SIT Logo und Farben
 
-Hier liegen die Logo-Dateien von A-SIT zum Herunterladen. Dazu kommen die Farben und die Regeln für den Einsatz.
+Hier liegen die Logo-Dateien von A-SIT und EGIZ zum Herunterladen. Dazu kommen die Farben und die Regeln für den Einsatz.
 
 ## Logo herunterladen
 
@@ -23,6 +23,38 @@ Für kleine Flächen, auf denen die Wortmarke nicht lesbar ist: Browser-Tab (Fav
 Alle PNG-Dateien haben einen transparenten Hintergrund. Verwende nach Möglichkeit SVG. Es bleibt in jeder Größe scharf.
 
 Alle Dateien auf einmal: [ZIP herunterladen](https://github.com/a-sit/a-sit-ci/archive/refs/heads/main.zip).
+
+## EGIZ-Logo herunterladen
+
+Das EGIZ (E-Government Innovationszentrum) ist ein Teil von A-SIT. Sein Logo gehört zur selben Familie: gleiche Schrift, gleiches Blau, gleicher Verlauf.
+
+| Vorschau | Fassung | Herunterladen |
+|---|---|---|
+| <img src="egiz/vorschau/egiz-logo.png" alt="EGIZ-Logo, Fassung Standard" width="240"> | **Standard**<br>Für weiße und helle Flächen. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-512.png) |
+| <img src="egiz/vorschau/egiz-logo-dunkel.png" alt="EGIZ-Logo, Fassung Dunkel" width="240"> | **Dunkel**<br>Für dunkle Flächen. Schrift in hellem Blau. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-dunkel.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-dunkel-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-dunkel-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-dunkel-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-dunkel-512.png) |
+| <img src="egiz/vorschau/egiz-logo-negativ.png" alt="EGIZ-Logo, Fassung Negativ" width="240"> | **Negativ**<br>Für dunkle oder farbige Flächen. Schrift in Weiß. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-negativ.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-negativ-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-negativ-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-negativ-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-negativ-512.png) |
+| <img src="egiz/vorschau/egiz-logo-schwarz.png" alt="EGIZ-Logo, Fassung Schwarz" width="240"> | **Schwarz**<br>Einfarbig, z. B. für Schwarz-Weiß-Druck und Stempel. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-schwarz.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-schwarz-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-schwarz-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-schwarz-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-schwarz-512.png) |
+| <img src="egiz/vorschau/egiz-logo-weiss.png" alt="EGIZ-Logo, Fassung Weiß" width="240"> | **Weiß**<br>Einfarbig weiß, z. B. auf Fotos oder für Prägung. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-weiss.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-weiss-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-weiss-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-weiss-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-weiss-512.png) |
+
+### Mit Unterzeile
+
+Mit dem ausgeschriebenen Namen. Für große Darstellungen, zum Beispiel auf Berichten und Folien. Unter 40 px Höhe das Logo ohne Unterzeile verwenden.
+
+| Vorschau | Fassung | Herunterladen |
+|---|---|---|
+| <img src="egiz/vorschau/egiz-logo-unterzeile.png" alt="EGIZ-Logo mit Unterzeile, Fassung Standard" width="240"> | **Standard**<br>Für weiße und helle Flächen. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-unterzeile.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-512.png) |
+| <img src="egiz/vorschau/egiz-logo-unterzeile-dunkel.png" alt="EGIZ-Logo mit Unterzeile, Fassung Dunkel" width="240"> | **Dunkel**<br>Für dunkle Flächen. Schrift in hellem Blau. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-unterzeile-dunkel.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-dunkel-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-dunkel-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-dunkel-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-dunkel-512.png) |
+| <img src="egiz/vorschau/egiz-logo-unterzeile-negativ.png" alt="EGIZ-Logo mit Unterzeile, Fassung Negativ" width="240"> | **Negativ**<br>Für dunkle oder farbige Flächen. Schrift in Weiß. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-unterzeile-negativ.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-negativ-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-negativ-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-negativ-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-negativ-512.png) |
+| <img src="egiz/vorschau/egiz-logo-unterzeile-schwarz.png" alt="EGIZ-Logo mit Unterzeile, Fassung Schwarz" width="240"> | **Schwarz**<br>Einfarbig, z. B. für Schwarz-Weiß-Druck und Stempel. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-unterzeile-schwarz.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-schwarz-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-schwarz-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-schwarz-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-schwarz-512.png) |
+| <img src="egiz/vorschau/egiz-logo-unterzeile-weiss.png" alt="EGIZ-Logo mit Unterzeile, Fassung Weiß" width="240"> | **Weiß**<br>Einfarbig weiß, z. B. auf Fotos oder für Prägung. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/svg/egiz-logo-unterzeile-weiss.svg)<br>PNG (Höhe in px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-weiss-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-weiss-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-weiss-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/png/egiz-logo-unterzeile-weiss-512.png) |
+
+### Symbol
+
+| Vorschau | Fassung | Herunterladen |
+|---|---|---|
+| <img src="egiz/symbol/egiz-symbol-128.png" alt="EGIZ-Symbol: E aus drei Balken auf weißer Kachel" width="64"> | **Symbol**<br>Das „E“ auf einer weißen Kachel. | [SVG](https://github.com/a-sit/a-sit-ci/raw/main/egiz/symbol/egiz-symbol.svg)<br>PNG (px): [64](https://github.com/a-sit/a-sit-ci/raw/main/egiz/symbol/egiz-symbol-64.png) · [128](https://github.com/a-sit/a-sit-ci/raw/main/egiz/symbol/egiz-symbol-128.png) · [256](https://github.com/a-sit/a-sit-ci/raw/main/egiz/symbol/egiz-symbol-256.png) · [512](https://github.com/a-sit/a-sit-ci/raw/main/egiz/symbol/egiz-symbol-512.png) |
+
+Für das EGIZ-Logo gelten dieselben Regeln wie für das A-SIT-Logo. Der Freiraum rund um das Logo ist mindestens so breit wie ein Balken des „E“.
 
 ## Regeln für den Einsatz
 
@@ -58,6 +90,16 @@ Die Wortmarke „A=SIT“ ist in Bricolage Grotesque (ExtraBold) gesetzt und in 
 - Die Lücke zum A, die Lücke zum S und der Streifen zwischen den Balken sind je so breit wie ein Balken.
 - Seitenverhältnis und Farbverlauf der Flagge stammen aus dem Logo von Digital Austria.
 
+## Das EGIZ-Logo
+
+Das „E“ besteht aus drei Balken. Danach folgt „GIZ“ in Bricolage Grotesque (ExtraBold), als Pfade.
+
+- Die Balken sind so dick wie die Arme des E in der Schrift: ein Fünftel der Höhe der Großbuchstaben.
+- Der obere und der untere Balken tragen den Verlauf der Flagge. Wie beim A-SIT-Logo gibt es genau zwei farbige Balken.
+- Der mittlere Balken ist kürzer und hat die Farbe der Schrift.
+- Die linken Kanten liegen in einer Flucht. Die Schräge hat dieselbe Steigung wie die Flagge im A-SIT-Logo (1 : 3).
+- In den einfarbigen Fassungen haben alle drei Balken die Farbe der Schrift.
+
 ## Dateien im Repository
 
 | Ordner | Inhalt |
@@ -68,6 +110,7 @@ Die Wortmarke „A=SIT“ ist in Bricolage Grotesque (ExtraBold) gesetzt und in 
 | `logo/symbol/` | Symbol als SVG und PNG. In `web/` liegen `favicon.svg`, `favicon.ico` und `apple-touch-icon.png` für die Website. |
 | `logo/teilen/og-standard.png` | Vorschaubild für geteilte Links (1200 × 630). Die Website nutzt es für Seiten ohne eigenes Titelbild. |
 | `logo/entwuerfe/` | Nicht freigegebene Entwürfe mit kleinerer Flagge (85 % und 75 %). Nicht verwenden. |
+| `egiz/` | EGIZ-Logo: `svg/`, `png/`, `vorschau/` und `symbol/`, aufgebaut wie `logo/`. |
 | `farben/` | Farben als CSS-Variablen (`farben.css`) und als JSON (`farben.json`). |
 | `hugo/` | Logo für den Header der Website technology.a-sit.at. |
 | `werkzeuge/` | Generator für alle Logo-Dateien. |
@@ -87,6 +130,7 @@ Die Schrift Bricolage Grotesque (variable TTF) gibt es bei [Google Fonts](https:
 
 ```bash
 .venv/bin/python werkzeuge/logo-erzeugen.py <BricolageGrotesque[opsz,wdth,wght].ttf>
+.venv/bin/python werkzeuge/egiz-logo-erzeugen.py <BricolageGrotesque[opsz,wdth,wght].ttf>
 node werkzeuge/png-export.mjs
 node werkzeuge/symbol-erzeugen.mjs
 ```

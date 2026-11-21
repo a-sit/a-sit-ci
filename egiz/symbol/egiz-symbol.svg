@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EGIZ">
+<title>EGIZ</title>
+<defs><radialGradient id="egiz-flagge" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(626.1 0 0 623.4 54.0 14.4)"><stop offset="0.046" stop-color="#00A3A6"/><stop offset="0.149" stop-color="#1C7FA0"/><stop offset="0.275" stop-color="#3A5999"/><stop offset="0.342" stop-color="#464B96"/><stop offset="0.522" stop-color="#963286"/><stop offset="0.8" stop-color="#FA0041"/></radialGradient></defs>
+<rect width="64" height="64" rx="12" fill="#FFFFFF"/>
+<g transform="translate(17.58 15) scale(0.05152)"><path fill="url(#egiz-flagge)" d="M0,0H560V132H44ZM176,528H560V660H220Z"/><path fill="#0369A1" d="M88,264H362V396H132Z"/></g>
+</svg>
