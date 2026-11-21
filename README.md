@@ -1,4 +1,4 @@
-# A-SIT Logo und Farben
+# A-SIT und EGIZ: Logos und Farben
 
 Hier liegen die Logo-Dateien von A-SIT und EGIZ zum Herunterladen. Dazu kommen die Farben und die Regeln für den Einsatz.
 
