@@ -13,6 +13,8 @@ Erzeugt in egiz/svg/:
   egiz-logo-unterzeile.svg, -dunkel, -negativ, -schwarz, -weiss    Logo mit ausgeschriebenem Namen
 und in egiz/symbol/:
   egiz-symbol.svg                                                  das E auf einer weißen Kachel
+und in hugo/layouts/_partials/:
+  logo-egiz.html                                                   Logo für den Header der Website (Farben aus den Tokens)
 Danach die PNGs neu erzeugen: node werkzeuge/png-export.mjs
 """
 
@@ -96,15 +98,39 @@ def balken(y, dicke, rechts):
     return f"M{zahl(SLOPE * y)},{zahl(y)}H{zahl(rechts)}V{zahl(y + dicke)}H{zahl(SLOPE * (y + dicke))}Z"
 
 
-def verlauf(gid, breite):
-    """Verlauf von Digital Austria, auf die Breite des E gestreckt (Rot am rechten Rand)."""
+def verlauf_lage(breite):
+    """Lage des Verlaufs von Digital Austria, auf die Breite des E gestreckt (Rot am rechten Rand)."""
     k = breite / FLAG_RATIO / DA_HEIGHT
     cx, cy = (DA_CENTER[0] - DA_ORIGIN[0]) * k, (DA_CENTER[1] - DA_ORIGIN[1]) * k
-    stopps = "".join(f'<stop offset="{o:g}" stop-color="{c}"/>' for o, c in DA_STOPS)
     return (
-        f'<radialGradient id="{gid}" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" '
-        f'gradientTransform="matrix({DA_RADIUS[0] * k:.1f} 0 0 {DA_RADIUS[1] * k:.1f} {cx:.1f} {cy:.1f})">{stopps}</radialGradient>'
+        'cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" '
+        f'gradientTransform="matrix({DA_RADIUS[0] * k:.1f} 0 0 {DA_RADIUS[1] * k:.1f} {cx:.1f} {cy:.1f})"'
     )
+
+
+def verlauf(gid, breite):
+    """Verlauf mit festen Farben, für die eigenständigen SVG-Dateien."""
+    stopps = "".join(f'<stop offset="{o:g}" stop-color="{c}"/>' for o, c in DA_STOPS)
+    return f'<radialGradient id="{gid}" {verlauf_lage(breite)}>{stopps}</radialGradient>'
+
+
+def hugo_partial(viewbox, d_aussen, d_schrift):
+    """Hugo-Partial für den Header: Farben kommen über CSS aus den Tokens der Site."""
+    stopps = "\n".join(f'      <stop class="logo__stop-{i}" offset="{o:g}"></stop>' for i, (o, _) in enumerate(DA_STOPS, 1))
+    return f"""{{{{- /* Logo EGIZ (E aus drei Balken, GIZ in Bricolage Grotesque als Pfade).
+     Erzeugt von werkzeuge/egiz-logo-erzeugen.py im Repository a-sit-ci. Nicht von Hand ändern.
+     Gleiche Höhe und Grundlinie wie die Wortmarke A-SIT (logo.html).
+     Farben: --color-brand und --color-brand-flag-1..6 in der Token-Datei der Site. */ -}}}}
+<svg class="logo logo--egiz" viewBox="{viewbox}" role="img" aria-label="EGIZ" focusable="false">
+  <defs>
+    <radialGradient id="logo-egiz-flagge" {verlauf_lage(E_BREITE)}>
+{stopps}
+    </radialGradient>
+  </defs>
+  <path class="logo__flag" fill="url(#logo-egiz-flagge)" d="{d_aussen}"></path>
+  <path class="logo__text" d="{d_schrift}"></path>
+</svg>
+"""
 
 
 def main(font_path: str) -> None:
@@ -138,6 +164,11 @@ def main(font_path: str) -> None:
     for endung, schrift, balkenfarbe, unterzeile in FASSUNGEN:
         (ZIEL / "svg" / f"egiz-logo{endung}.svg").write_text(svg(schrift, balkenfarbe, None))
         (ZIEL / "svg" / f"egiz-logo-unterzeile{endung}.svg").write_text(svg(schrift, balkenfarbe, unterzeile))
+
+    # Hugo-Partial: Logo ohne Unterzeile, gleicher Ausschnitt wie egiz-logo.svg
+    (ROOT / "hugo/layouts/_partials/logo-egiz.html").write_text(
+        hugo_partial(f"0 {-RAND} {rechts:.0f} {cap + 2 * RAND:.0f}", d_aussen, d_mitte + d_giz)
+    )
 
     # Symbol: das E mittig auf einer weißen Kachel
     s = (KACHEL - 2 * KACHEL_RAND) / cap

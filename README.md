@@ -112,7 +112,7 @@ Das „E“ besteht aus drei Balken. Danach folgt „GIZ“ in Bricolage Grotesq
 | `logo/entwuerfe/` | Nicht freigegebene Entwürfe mit kleinerer Flagge (85 % und 75 %). Nicht verwenden. |
 | `egiz/` | EGIZ-Logo: `svg/`, `png/`, `vorschau/` und `symbol/`, aufgebaut wie `logo/`. |
 | `farben/` | Farben als CSS-Variablen (`farben.css`) und als JSON (`farben.json`). |
-| `hugo/` | Logo für den Header der Website technology.a-sit.at. |
+| `hugo/` | Logos für den Header der Website technology.a-sit.at: A-SIT (`logo.html`) und EGIZ (`logo-egiz.html`). |
 | `werkzeuge/` | Generator für alle Logo-Dateien. |
 
 ## Für Entwickler: Logo neu erzeugen
